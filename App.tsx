@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { ConfigPanel } from './components/ConfigPanel';
 import { Statement } from './components/Statement';
+import { VideoPresentation } from './components/VideoPresentation';
 import { AppConfig, DateSelection } from './types';
 import { getBusinessDays, months } from './utils/helpers';
 import { Download, Calendar } from 'lucide-react';
@@ -108,6 +109,8 @@ export default function App() {
         <div className="mt-6">
             <Statement config={config} date={date} />
         </div>
+
+        <VideoPresentation />
 
         <div className="mt-8 text-center text-slate-500 text-xs print:mt-12 print:text-left">
             <p>Este extrato tem finalidade meramente informativa e de simulação, não substituindo o holerite oficial ou documentos legais da empresa.</p>
